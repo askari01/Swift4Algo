@@ -9,3 +9,9 @@ Simple Swift 4 Algorithms
 - ASCII to Int
 - Find the only heavier coin in a group of 8 coins
 
+WORK IN PROGRESS, more coming
+
+Single Swift file for each algorith with embedded sample usage / testing logic
+
+To try it please install Swift 4 | XCode 9 and just use swift [file name].swift on terminal
+
