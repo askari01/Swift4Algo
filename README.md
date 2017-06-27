@@ -8,6 +8,9 @@ Simple Swift 4 Algorithms
 - Find N Ordered element of a unsorted array
 - ASCII to Int
 - Find the only heavier coin in a group of 8 coins
+- Deck Shuffling (randomize existing array)
+- Path Between Nodes in a Tree
+
 
 WORK IN PROGRESS, more coming
 
