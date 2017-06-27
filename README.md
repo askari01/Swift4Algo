@@ -10,6 +10,7 @@ Simple Swift 4 Algorithms
 - Find the only heavier coin in a group of 8 coins
 - Deck Shuffling (randomize existing array)
 - Path Between Nodes in a Tree
+- Coin Flipping and Die Rolls (Random Int using random bit generator)
 
 
 WORK IN PROGRESS, more coming
