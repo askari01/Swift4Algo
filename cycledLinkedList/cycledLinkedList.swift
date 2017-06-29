@@ -2,12 +2,10 @@ import Foundation
 
 class List<T> {
     var value: T
-    var unique: UUID
     var next: List?
     
     init(_ value: T, next: List? = nil) {
         self.value = value
-        self.unique = UUID()
         self.next = next
     }
     
@@ -25,7 +23,7 @@ class List<T> {
             callback(l!)
             l = l!.next
         }
-        while l != nil
+            while l != nil
     }
     
     func isLooped() -> Bool {
@@ -38,7 +36,7 @@ class List<T> {
             
             if lfast == nil || lslow == nil { break }
             
-            if lfast?.unique == lslow?.unique {
+            if lfast === lslow {
                 return true
             }
         }
@@ -64,4 +62,6 @@ print("add loop to the 5th")
 last?.next = linkedList.next?.next?.next?.next
 print("\(last?.value) -> \(last?.next?.value)")
 print("is closed: \(linkedList.isLooped())")
+
+
 
