@@ -11,6 +11,8 @@ Simple Swift 4 Algorithms
 - Deck Shuffling (randomize existing array)
 - Path Between Nodes in a Tree
 - Coin Flipping and Die Rolls (Random Int using random bit generator)
+- Boyer Moore String Search
+
 
 
 WORK IN PROGRESS, more coming
