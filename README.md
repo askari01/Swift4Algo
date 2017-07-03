@@ -12,6 +12,7 @@ Simple Swift 4 Algorithms
 - Path Between Nodes in a Tree
 - Coin Flipping and Die Rolls (Random Int using random bit generator)
 - Boyer Moore String Search
+- Levenshtein
 
 
 
