@@ -14,6 +14,7 @@ Simple Swift 4 Algorithms
 - Boyer Moore String Search
 - Levenshtein
 - Array Rotate Left
+- Trees: Is This a Binary Search Tree?
 
 
 
