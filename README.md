@@ -15,6 +15,7 @@ Simple Swift 4 Algorithms
 - Levenshtein
 - Array Rotate Left
 - Trees: Is This a Binary Search Tree?
+- Tries: Contacts
 
 
 
