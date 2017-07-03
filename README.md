@@ -13,6 +13,7 @@ Simple Swift 4 Algorithms
 - Coin Flipping and Die Rolls (Random Int using random bit generator)
 - Boyer Moore String Search
 - Levenshtein
+- Array Rotate Left
 
 
 
