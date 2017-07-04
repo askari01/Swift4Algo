@@ -18,6 +18,7 @@ Simple Swift 4 Algorithms
 - Tries: Contacts
 - Strings: Making Anagrams
 - Get Products Of All Array Except At Index with NO Division
+- Rectangles Intersection
 
 
 
