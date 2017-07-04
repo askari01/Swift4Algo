@@ -17,6 +17,8 @@ Simple Swift 4 Algorithms
 - Trees: Is This a Binary Search Tree?
 - Tries: Contacts
 - Strings: Making Anagrams
+- Max Profit on Yesterday Stock Price
+
 
 
 
