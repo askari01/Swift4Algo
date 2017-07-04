@@ -20,6 +20,7 @@ Simple Swift 4 Algorithms
 - Get Products Of All Array Except At Index with NO Division
 - Rectangles Intersection
 - Queue with 2 Stacks
+- Heaps: Find the Running Median
 
 
 
