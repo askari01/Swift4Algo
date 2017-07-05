@@ -22,6 +22,7 @@ Simple Swift 4 Algorithms
 - Queue with 2 Stacks
 - Heaps: Find the Running Median
 - BST: Second Greatest
+- BinarySearch: Find Rotation Point on Sorted but Rotated array
 
 
 
