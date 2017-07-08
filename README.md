@@ -24,6 +24,7 @@ Simple Swift 4 Algorithms
 - BST: Second Greatest
 - BinarySearch: Find Rotation Point on Sorted but Rotated array
 - Fibonacci: Recursive vs Dynamic vs Linear
+- Trees: Compare two trees using a depth first search
 
 
 
