@@ -25,6 +25,7 @@ Simple Swift 4 Algorithms
 - BinarySearch: Find Rotation Point on Sorted but Rotated array
 - Fibonacci: Recursive vs Dynamic vs Linear
 - Trees: Compare two trees using a depth first search
+- Sort: bucketSort, radixSort, quickSort, heapSort, mergeSort, selectionSort, insertionSort, bubbleSort 
 
 
 
