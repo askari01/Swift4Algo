@@ -28,6 +28,7 @@ Simple Swift 4 Algorithms
 - Sort: bucketSort, radixSort, quickSort, heapSort, mergeSort, selectionSort, insertionSort, bubbleSort 
 - Bitwise op XOR: Find The Unique Non Duplicate ID(Int) in an Array full of duplicate IDs (Int) except one
 - Reverse Forward Linked List
+- Last n Element of a Forward Linked List
 
 
 
