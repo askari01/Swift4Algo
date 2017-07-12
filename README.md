@@ -26,6 +26,7 @@ Simple Swift 4 Algorithms
 - Fibonacci: Recursive vs Dynamic vs Linear
 - Trees: Compare two trees using a depth first search
 - Sort: bucketSort, radixSort, quickSort, heapSort, mergeSort, selectionSort, insertionSort, bubbleSort 
+- Bitwise op XOR: Find The Unique Non Duplicate ID(Int) in an Array full of duplicate IDs (Int) except one
 
 
 
