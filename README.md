@@ -27,6 +27,7 @@ Simple Swift 4 Algorithms
 - Trees: Compare two trees using a depth first search
 - Sort: bucketSort, radixSort, quickSort, heapSort, mergeSort, selectionSort, insertionSort, bubbleSort 
 - Bitwise op XOR: Find The Unique Non Duplicate ID(Int) in an Array full of duplicate IDs (Int) except one
+- Reverse Forward Linked List
 
 
 
