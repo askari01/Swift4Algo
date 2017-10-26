@@ -31,6 +31,7 @@ Simple Swift 4 Algorithms
 - Last n Element of a Forward Linked List
 - Island in a Matrix (Graph)
 - Duplicate in stream of integers from 1 to n (no memory)
+- EggsDrop: N eggs, what's the highest floor from which you can drop the egg without breaking it
 
 
 WORK IN PROGRESS, more coming
