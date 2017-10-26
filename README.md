@@ -30,7 +30,7 @@ Simple Swift 4 Algorithms
 - Reverse Forward Linked List
 - Last n Element of a Forward Linked List
 - Island in a Matrix (Graph)
-
+- Duplicate in stream of integers from 1 to n (no memory)
 
 
 WORK IN PROGRESS, more coming
