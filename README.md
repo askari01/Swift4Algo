@@ -32,6 +32,7 @@ Simple Swift 4 Algorithms
 - Island in a Matrix (Graph)
 - Duplicate in stream of integers from 1 to n (no memory)
 - EggsDrop: N eggs, what's the highest floor from which you can drop the egg without breaking it
+- IPDuplicates: Given a stream of IPv4 addresses find all IPs that occurred only once
 
 
 WORK IN PROGRESS, more coming
