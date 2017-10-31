@@ -1,53 +1,74 @@
 import Foundation
 
-class Tree<T:Comparable> {
-    var value:T
-    var left:Tree? {
-        didSet {
-            left?.parent = self
-        }
-    }
-    var right:Tree? {
-        didSet {
-            right?.parent = self
-        }
-    }
-    var parent:Tree?
+class Tree<T: Comparable> {
+    let value: T
     
-    init(_ value:T) {
+    var left: Tree?
+    var right: Tree?
+    
+    init(_ value: T) {
         self.value = value
     }
     
-    func checkBST(_ last: inout T) -> Bool {
-        if left != nil && !left!.checkBST(&last) {
+    func checkIfBST(min: inout T) -> Bool {
+        if let l = left, !l.checkIfBST(min: &min) {
             return false
         }
         
-        if (value <= last) {
-            return false;
+        if value <= min {
+            return false
         }
         else {
-            last = value;
+            min = value
         }
         
-        if right != nil && !right!.checkBST(&last) {
+        if let r = right, !r.checkIfBST(min: &min) {
             return false
         }
         
-        return true;
+        return true
+    }
+    
+    func checkIfBST2(completition: (T) -> Bool) -> Bool {
+        if let l = left, !l.checkIfBST2(completition: completition) {
+            return false
+        }
+        
+        if !completition(value) {
+            return false
+        }
+        
+        if let r = right, !r.checkIfBST2(completition: completition) {
+            return false
+        }
+        
+        return true
+    }
+    
+}
+
+var top = Tree(4)
+top.left = Tree(2)
+top.right = Tree(6)
+top.left!.left = Tree(1)
+top.left!.right = Tree(3)
+top.right!.left = Tree(5)
+top.right!.right = Tree(7)
+
+var min = -1
+top.checkIfBST(min: &min)
+
+min = -1
+top.checkIfBST2{ value in
+    if value <= min {
+        return false
+    }
+    else {
+        min = value
+        return true
     }
 }
 
-//          4
-//    2           6
-// 1     3     5     7
-var t = Tree<Int>(4)
-t.left = Tree<Int>(2)
-t.left!.left = Tree<Int>(1)
-t.left!.right = Tree<Int>(3)
-t.right = Tree<Int>(6)
-t.right!.left = Tree<Int>(5)
-t.right!.right = Tree<Int>(7)
 
-var last = -1
-t.checkBST(&last)
+
+
