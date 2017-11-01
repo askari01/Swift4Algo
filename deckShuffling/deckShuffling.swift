@@ -1,21 +1,29 @@
 import Foundation
 
-func createSortedArrayOfSize(_ n: Int) -> [Int] {
-    var array = [Int]()
-    for i in 0..<n {
+var array = [Int]()
+
+for i in 1...13 {
+    for _ in 0..<4 {
         array.append(i)
     }
-    return array
 }
 
-func randomizeArray(_ array: inout [Int]) {
-    for i in 0..<array.count {
-        let r = i + Int(arc4random_uniform(UInt32(array.count - i)))
-        (array[i], array[r]) = (array[r], array[i])
+print(array)
+
+extension Array {
+    mutating func randomize() {
+        for i in 0..<self.count {
+            let r = i + Int(arc4random_uniform(UInt32(self.count - i)))
+            (self[i], self[r]) = (self[r], self[i])
+        }
     }
 }
 
-var array = createSortedArrayOfSize(100)
-randomizeArray(&array)
+array.randomize()
+
 print(array)
-print(array.sorted())
+
+array.sort()
+
+print(array)
+

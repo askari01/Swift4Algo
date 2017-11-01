@@ -2,34 +2,30 @@
 
 import Foundation
 
-class DuplicateFinder {
-    var sum = 0
-    var num = 0
-    
-    func add(_ n: Int) {
-        sum += n
-        num += 1
+var array = [Int]()
+
+for i in 1...13 {
+    array.append(i)
+}
+array.append(7) //duplicate
+print(array)
+
+extension Array where Element: BinaryInteger {
+    mutating func randomize() {
+        for i in 0..<self.count {
+            let r = i + Int(arc4random_uniform(UInt32(self.count - i)))
+            (self[i], self[r]) = (self[r], self[i])
+        }
     }
     
-    func findDuplicate() -> Int {
-        guard num > 1 else { return -1 }
-        let expectedSum = num*(num-1)/2
+    func findDuplicate() -> Element? {
+        guard !isEmpty else { return nil }
+        let sum = self.reduce(0, +)
+        guard let expectedSum = Element(exactly: (count - 1) * count / 2) else { return nil }
         return sum - expectedSum
     }
 }
 
-
-var d = DuplicateFinder()
-d.findDuplicate()
-
-let t = arc4random_uniform(100) + 100
-
-for i in 1...t {
-    d.add(Int(i))
-}
-
-let r = arc4random_uniform(t) + 1
-d.add(Int(r))
-
-print("t = \(t) r = \(r) d = \(d.findDuplicate())")
-
+array.randomize()
+print(array)
+print(array.findDuplicate())
