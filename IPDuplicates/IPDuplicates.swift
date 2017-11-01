@@ -8,7 +8,7 @@ class IPDuplicateFinder {
     var data: Data
     
     init() {
-        data = Data(capacity: 256*256*256*32)
+        data = Data(capacity: 256*256*256*256/8)
     }
     
     func checkIP(ip: String) -> Bool {
@@ -20,15 +20,15 @@ class IPDuplicateFinder {
             let byte:UInt8 = UInt8(ottets[3])
             let group = Int(byte/8)
             let bit = Int(byte - UInt8(group*8))
-            let pointerPos = (ottets[0] * 256 * 256 * 32) + (ottets[1] * 256 * 32) + (ottets[2] * 32) + group
-
+            let pointerPos = (ottets[0] * 256 * 256 * 256/8) + (ottets[1] * 256 * 256/8) + (ottets[2] * 256/8) + group
+            
             print(pointerPos)
             
             data.withUnsafeMutableBytes { (pointer: UnsafeMutablePointer<UInt8>) in
                 if (pointer[pointerPos] >> bit) & 1 != 0 {
                     found = true
                 }
-
+                
                 pointer[pointerPos] |= 1 << bit
             }
         }
@@ -62,7 +62,7 @@ duplicate.checkIP(ip: "255.255.255.1")
 
 
 
-var byteArray = [UInt8](repeating: 0, count: 32)
+var byteArray = [UInt8](repeating: 0, count: 256/8)
 
 let byte:UInt8 = 17
 
