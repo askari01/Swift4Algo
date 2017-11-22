@@ -26,7 +26,7 @@ class Tries {
         }
         
         if string.count > 1 {
-            let remaining = string.substring(from: string.index(after: string.startIndex))
+            let remaining = String(string[string.index(after: string.startIndex)...])
             child.add(remaining)
         }
         else {
@@ -53,9 +53,8 @@ class Tries {
         let i = string[string.startIndex]
         
         if let pos = childs.index(where: {$0.value == i}) {
-            let child = childs[pos]
             if string.count > 1 {
-                let remaining = string.substring(from: string.index(after: string.startIndex))
+                let remaining = String(string[string.index(after: string.startIndex)...])
                 return childs[pos].find(remaining)
             }
             else {
@@ -73,5 +72,3 @@ t.add("hack")
 t.add("hackerrank")
 t.find("hac")
 t.find("hak")
-
-
