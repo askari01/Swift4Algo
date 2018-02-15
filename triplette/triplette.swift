@@ -30,5 +30,47 @@ func findTriplette(_ a: [Int]) -> [[Int]] {
     return r
 }
 
+struct triplette : Hashable, Equatable {
+    let array: [Int]
+    
+    init(_ a: Int, _ b: Int, _ c: Int) {
+        array = [a, b, c].sorted()
+    }
+    
+//    var hashValue : Int {
+//        return String(describing: self.array.map { UnicodeScalar(1000 + $0) }).hashValue
+//    }
+    var hashValue: Int {
+        return self.array.reduce(5381) {
+            ($0 << 5) &+ $0 &+ Int($1)
+        }
+    }
+
+
+    static func ==(lhs: triplette, rhs: triplette) -> Bool {
+        return lhs.hashValue == rhs.hashValue
+    }
+}
+
+
+func findTripletteCubic(_ a: [Int]) -> [[Int]] {
+    guard a.count > 2 else { return [[Int]]() }
+    
+    var r = Set<triplette>()
+
+    for i in a {
+        for j in a {
+            for l in a {
+                if i != j && i != l && i+j+l == 0 {
+                    r.insert(triplette(i, j, l))
+                }
+            }
+        }
+    }
+    
+    return r.map { $0.array }
+}
+
 print(findTriplette([5, -3, 0, 4, -2, 1, -1, 2, 3]))
+print(findTripletteCubic([5, -3, 0, 4, -2, 1, -1, 2, 3]))
 
