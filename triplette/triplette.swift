@@ -13,9 +13,12 @@ func findTriplette(_ a: [Int]) -> [[Int]] {
     
     func n() { i=o+1; j=i+1; l=i+2; o=i }
     func n2() { if j<c-2 { j+=1; l=j+1 } else { n() } }
+    //print(s)
     
     while i<c && j<c && l<c {
         let t = s[i]+s[j]+s[l]
+        
+        //print("\(s[i]) \(s[j]) \(s[l])")
         
         if t == 0 {
             r.append([s[i], s[j], s[l]])
@@ -62,7 +65,7 @@ func findTripletteCubic(_ a: [Int]) -> [[Int]] {
     for i in a {
         for j in a {
             for l in a {
-                if i != j && i != l && i+j+l == 0 {
+                if i != j && i != l && j != l && i+j+l == 0 {
                     r.insert(triplette(i, j, l))
                 }
             }
