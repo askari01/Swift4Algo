@@ -14,7 +14,7 @@ class DoubleList<K: Hashable, V> {
     }
 }
 
-struct mruCache<K: Hashable, V> {
+struct lruCache<K: Hashable, V> {
     var map: Dictionary<K, DoubleList<K,V>>
     var head: DoubleList<K,V>?
     var last: DoubleList<K,V>?
@@ -74,7 +74,7 @@ struct mruCache<K: Hashable, V> {
 
 
 
-var cache = mruCache<String, String>(size: 3)
+var cache = lruCache<String, String>(size: 3)
 for i in 1...5 {
     print("- insert \(i)")
     cache.set(key: String(i), value: String(i))
