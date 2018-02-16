@@ -13,13 +13,9 @@ func findTriplette(_ a: [Int]) -> [[Int]] {
     
     func n() { i=o+1; j=i+1; l=i+2; o=i }
     func n2() { if j<c-2 { j+=1; l=j+1 } else { n() } }
-    //print(s)
     
     while i<c && j<c && l<c {
         let t = s[i]+s[j]+s[l]
-        
-        //print("\(s[i]) \(s[j]) \(s[l])")
-        
         if t == 0 {
             r.append([s[i], s[j], s[l]])
             n2()

@@ -33,7 +33,7 @@ Simple Swift 4 Algorithms
 - Duplicate in stream of integers from 1 to n (no memory)
 - EggsDrop: N eggs, what's the highest floor from which you can drop the egg without breaking it
 - IPDuplicates: Given a stream of IPv4 addresses find all IPs that occurred only once
-- Triplette: Given an array of distinct elements find triplets in the array whose sum is zero.
+- LRU Cache: Implement a Last Recently Used Key Value Cache
 
 
 WORK IN PROGRESS, more coming
